@@ -121,23 +121,59 @@ python -m unittest discover -s tests -p "test_*.py"
 
 ---
 
-## ☁️ Cloud Deployment (Railway / Docker)
+## ☁️ Bipartite Cloud Architecture (Vercel + Railway)
 
-The backend heavy kinematics engine is containerized with Playwright Chromium support:
+To achieve global accessibility without local machine daemons, the system decouples into a low-latency presentation layer on **Vercel** and a containerized heavy kinematics engine on **Railway**:
 
-### Deploy to Railway
+```
+                       [ Web Client / Browser ]
+                                   │
+                                   ▼
+        ┌─────────────────────────────────────────────────────┐
+        │       Vercel Serverless Presentation Layer          │
+        │       - Next.js 14 Dashboard UI                     │
+        │       - Zero-Latency Clipboard / Raw DOM Parsing    │
+        │       - Live Canvas Phase-Space Orbit Visualizer    │
+        │       - next.config.js Proxy Rewrite (/api/backend) │
+        └──────────────────────────┬──────────────────────────┘
+                                   │
+                     Discrete Quaternion API Stream
+                                   │
+                                   ▼
+        ┌─────────────────────────────────────────────────────┐
+        │       Railway Heavy Kinematics Engine               │
+        │       - Docker + Ubuntu Jammy + Playwright Chromium │
+        │       - Spectral Network Interception Trap          │
+        │       - Poincaré Fractal Decoupling Matrix          │
+        │       - FastAPI ASGI Backend (:8080)                │
+        └─────────────────────────────────────────────────────┘
+```
+
+### 1. Deploy the Backend to Railway
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new)
 
-1. Connect your GitHub repository to [Railway](https://railway.app).
-2. Railway automatically detects `Dockerfile` and `railway.toml`.
-3. Set environment variable (optional):
-   - `CORS_ORIGINS=*` (or your Vercel frontend domain)
-4. Your persistent API will be live with Swagger documentation at `https://your-app.railway.app/docs`.
+1. Link your GitHub repository (`ai-data-bridge`) to [Railway](https://railway.app).
+2. Railway detects `Dockerfile` and `railway.toml` automatically.
+3. Once deployed, copy your public backend domain (e.g. `https://ai-data-bridge.up.railway.app`).
 
-### Run via Docker Locally
+### 2. Deploy the Frontend to Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+1. Link your GitHub repository (`ai-data-bridge`) to [Vercel](https://vercel.com).
+2. Set **Root Directory** to `frontend`.
+3. Add Environment Variable:
+   - `RAILWAY_API_URL` = `https://your-app.up.railway.app`
+4. Click **Deploy**. Your cloud bridge is now globally live!
+
+### 3. Local Development with Next.js & FastAPI
 ```bash
-docker build -t dds-bridge-api .
-docker run -p 8080:8080 -e PORT=8080 dds-bridge-api
+# Terminal 1: Launch Backend API
+python bridge.py serve --port 8080
+
+# Terminal 2: Launch Next.js Frontend
+cd frontend
+npm install
+npm run dev
 ```
 
 ---

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 AI-to-AI Data Bridge CLI (DDS-Bridge)
 Deterministic Coupled Map Lattice & Invariant Manifold Pipeline

@@ -1,4 +1,4 @@
-﻿# Security & Zero-Trust Policy
+# Security & Zero-Trust Policy
 
 ## 🔒 Security Architecture
 

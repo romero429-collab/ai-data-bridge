@@ -1,4 +1,4 @@
-﻿"""
+"""
 Data models for the AI-to-AI Data Bridge and Discrete Dynamical System.
 """
 

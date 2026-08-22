@@ -1,4 +1,4 @@
-﻿# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,6 +20,13 @@ output/
 test_extract.py
 test_fractal.py
 
+# Node / Next.js Build Artifacts
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
 # System & Editor Files
 .DS_Store
 Thumbs.db
@@ -27,3 +34,7 @@ Thumbs.db
 .idea/
 .env
 .env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

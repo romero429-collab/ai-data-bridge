@@ -1,4 +1,4 @@
-﻿"""
+"""
 Phase 3: The Propagation Vector (Injection Kinematics)
 Transforms and bounds the conversational payload for target AI ingestion.
 Applies error-cone syntax sanitization, context window sizing, and provider-specific prompt schemas.

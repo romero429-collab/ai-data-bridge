@@ -1,4 +1,4 @@
-﻿"""
+"""
 AI-to-AI Data Bridge Core Package
 """
 

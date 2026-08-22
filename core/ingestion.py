@@ -1,4 +1,4 @@
-﻿"""
+"""
 Phase 1: The Ingestion Map (Extraction Dynamics) - V4
 (Spectral Network Interception + Playwright Hydration + Fractal Decoupling)
 Extracts conversation turns from live AI share links via Headless Chromium,

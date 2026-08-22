@@ -1,4 +1,4 @@
-﻿"""
+"""
 Phase 2: The Structural Attractor (Formatting the Manifold)
 Packs the linearized state vector into high-fidelity target manifolds:
 - Interactive Cybernetic HTML Replica with embedded Phase-Space Canvas Visualizer

@@ -1,4 +1,4 @@
-﻿"""
+"""
 Unit and Integration Tests for FastAPI Cloud API
 """
 

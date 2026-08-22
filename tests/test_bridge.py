@@ -1,4 +1,4 @@
-﻿"""
+"""
 Unit and Integration Test Suite for AI-to-AI Data Bridge (DDS-Bridge).
 Verifies dynamical stability indicators, DOM ingestion dynamics, manifold formatters,
 and kinematics injection engines.

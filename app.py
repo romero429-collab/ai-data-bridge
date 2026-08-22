@@ -1,4 +1,4 @@
-﻿"""
+"""
 FastAPI Production Cloud Backend for AI-to-AI Data Bridge (DDS-Bridge)
 Serves the Heavy Kinematics & Spectral Network Interception Engine for Railway/Cloud Deployment.
 """

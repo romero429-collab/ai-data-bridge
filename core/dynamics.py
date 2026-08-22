@@ -1,4 +1,4 @@
-﻿"""
+"""
 Dynamical Systems and Topological Transfer Engine for AI-to-AI Data Bridge.
 Models conversation trajectories via coupled map lattices, Hénon/Logistic projections,
 Jacobian stability metrics, Lyapunov exponent estimation, and Hamilton quaternion kinematics.

@@ -1,4 +1,4 @@
-﻿"""
+"""
 Local Interactive Web Server & API for AI-to-AI Data Bridge.
 Provides a modern visual interface for pasting URLs, dropping HTML snapshots,
 inspecting real-time dynamical phase portraits, and downloading formatted manifolds.
