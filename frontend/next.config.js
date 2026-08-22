@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
-    const backendUrl = process.env.RAILWAY_API_URL || process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8080';
+    const backendUrl =
+      process.env.RAILWAY_API_URL ||
+      process.env.NEXT_PUBLIC_API_URL ||
+      'https://sunami47-ai-data-bridge.hf.space';
     return [
       {
         source: '/api/backend/:path*',

@@ -1,5 +1,9 @@
 {
   "framework": "nextjs",
   "buildCommand": "next build",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "env": {
+    "RAILWAY_API_URL": "https://sunami47-ai-data-bridge.hf.space",
+    "NEXT_PUBLIC_API_URL": "https://sunami47-ai-data-bridge.hf.space"
+  }
 }
