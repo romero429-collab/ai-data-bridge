@@ -121,5 +121,26 @@ python -m unittest discover -s tests -p "test_*.py"
 
 ---
 
+## ☁️ Cloud Deployment (Railway / Docker)
+
+The backend heavy kinematics engine is containerized with Playwright Chromium support:
+
+### Deploy to Railway
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new)
+
+1. Connect your GitHub repository to [Railway](https://railway.app).
+2. Railway automatically detects `Dockerfile` and `railway.toml`.
+3. Set environment variable (optional):
+   - `CORS_ORIGINS=*` (or your Vercel frontend domain)
+4. Your persistent API will be live with Swagger documentation at `https://your-app.railway.app/docs`.
+
+### Run via Docker Locally
+```bash
+docker build -t dds-bridge-api .
+docker run -p 8080:8080 -e PORT=8080 dds-bridge-api
+```
+
+---
+
 ## 📜 License
 MIT License
