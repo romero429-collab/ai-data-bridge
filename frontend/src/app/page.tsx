@@ -550,6 +550,28 @@ Gabriel: Excellent. All manifolds are asymptotically stable.
               </span>
             )}
           </div>
+          {/* Topological Boundary & Fallback Guidance Notice */}
+          <div
+            style={{
+              background: 'rgba(245, 158, 11, 0.08)',
+              border: '1px solid rgba(245, 158, 11, 0.3)',
+              borderRadius: '8px',
+              padding: '0.85rem 1rem',
+              fontSize: '0.8rem',
+              color: '#fde68a',
+              lineHeight: '1.45',
+            }}
+          >
+            <div style={{ fontWeight: 700, color: 'var(--accent-amber)', marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <span>⚠️</span> <span>Topological Boundary Notice</span>
+            </div>
+            <div>
+              Automated link extraction may not operate on certain URLs due to strict session login walls, authentication barriers, or Cloudflare security shields.
+            </div>
+            <div style={{ marginTop: '0.4rem', color: '#fef08a' }}>
+              💡 If your URL extraction returns an error or misses data, you may need to <strong>try a different AI model&apos;s link</strong>, or switch to the <strong>Raw HTML / Text (Zero-Latency) tab</strong> and paste the conversation directly from your browser to bypass the network barrier entirely.
+            </div>
+          </div>
 
           <div className="tabs">
             <div

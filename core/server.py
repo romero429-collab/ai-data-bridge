@@ -322,7 +322,12 @@ DASHBOARD_HTML = """<!DOCTYPE html>
         <div class="card">
             <div class="card-title">
                 <span>Phase 1: Ingestion Vector</span>
-                <span id="platformBadge" style="font-size: 0.7rem; color: var(--accent-purple);"></span>
+            <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 0.85rem 1rem; font-size: 0.8rem; color: #fde68a; line-height: 1.45;">
+                <div style="font-weight: 700; color: var(--accent-amber); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>⚠️</span> <span>Topological Boundary Notice</span>
+                </div>
+                <div>Automated link extraction may not operate on certain URLs due to strict session login walls, authentication barriers, or Cloudflare security shields.</div>
+                <div style="margin-top: 0.4rem; color: #fef08a;">💡 If your URL extraction returns an error or misses data, you may need to <strong>try a different AI model's link</strong>, or switch to the <strong>Raw HTML / Text (Zero-Latency) tab</strong> and paste the conversation directly from your browser to bypass the network barrier entirely.</div>
             </div>
 
             <div class="tabs">
