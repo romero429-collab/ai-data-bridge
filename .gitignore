@@ -1,0 +1,29 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Local Extraction Outputs & Personal Manifolds
+output/
+*.log
+test_extract.py
+test_fractal.py
+
+# System & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+.env.*
