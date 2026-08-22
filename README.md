@@ -1,3 +1,13 @@
+---
+title: AI to AI Data Bridge
+emoji: 🌉
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+app_port: 8080
+---
+
 # AI-to-AI Data Bridge (DDS-Bridge)
 
 > **Deterministic Coupled Map Lattice & Invariant Manifold Pipeline for Lossless AI-to-AI Context Transfer**
@@ -149,12 +159,18 @@ To achieve global accessibility without local machine daemons, the system decoup
         └─────────────────────────────────────────────────────┘
 ```
 
-### 1. Deploy the Backend to Railway
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new)
+### 1. Deploy the Backend (Free 16GB RAM on Hugging Face Spaces)
+[![Deploy on HuggingFace](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-sm.svg)](https://huggingface.co/new-space)
 
-1. Link your GitHub repository (`ai-data-bridge`) to [Railway](https://railway.app).
-2. Railway detects `Dockerfile` and `railway.toml` automatically.
-3. Once deployed, copy your public backend domain (e.g. `https://ai-data-bridge.up.railway.app`).
+1. Go to [Hugging Face Spaces](https://huggingface.co/new-space) $\to$ Create a new Space.
+2. Select **Docker** as the SDK (Blank template) and set Visibility to **Public**.
+3. In the Space repository, link or mirror your GitHub repository (`romero429-collab/ai-data-bridge`).
+4. Hugging Face builds the Docker container with **16GB RAM + 2 vCPUs (100% Free)**.
+5. Copy your Space Direct URL (e.g. `https://romero429-ai-data-bridge.hf.space`).
+
+### Alternative: Deploy Backend to Railway
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new)
+Link your repository to [Railway](https://railway.app) for auto-detected Docker container deployment.
 
 ### 2. Deploy the Frontend to Vercel
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
@@ -162,8 +178,8 @@ To achieve global accessibility without local machine daemons, the system decoup
 1. Link your GitHub repository (`ai-data-bridge`) to [Vercel](https://vercel.com).
 2. Set **Root Directory** to `frontend`.
 3. Add Environment Variable:
-   - `RAILWAY_API_URL` = `https://your-app.up.railway.app`
-4. Click **Deploy**. Your cloud bridge is now globally live!
+   - `RAILWAY_API_URL` = `https://your-space-name.hf.space` *(or your Railway backend URL)*
+4. Click **Deploy**. Your cloud bridge is now globally live with 100% free hosting!
 
 ### 3. Local Development with Next.js & FastAPI
 ```bash
