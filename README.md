@@ -1,4 +1,4 @@
-﻿# AI-to-AI Data Bridge (DDS-Bridge)
+# AI-to-AI Data Bridge (DDS-Bridge)
 
 > **Deterministic Coupled Map Lattice & Invariant Manifold Pipeline for Lossless AI-to-AI Context Transfer**
 
@@ -65,9 +65,10 @@ The **AI-to-AI Data Bridge** circumvents this chaotic bifurcation by implementin
 
 ### 1. Installation
 ```bash
-git clone https://github.com/your-username/ai-data-bridge.git
+git clone https://github.com/romero429-collab/ai-data-bridge.git
 cd ai-data-bridge
 pip install -r requirements.txt
+playwright install chromium
 ```
 *(Dependencies: `beautifulsoup4`, `lxml`, `httpx`)*
 
