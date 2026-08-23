@@ -380,7 +380,7 @@ export default function Dashboard() {
       return;
     }
 
-    const backendEndpoint = customBackend ? `${customBackend.replace(/\/$/, '')}/api/extract` : '/api/backend/extract';
+    const backendEndpoint = customBackend ? `${customBackend.replace(/\/$/, '')}/api/extract` : '/api/extract';
 
     try {
       const res = await fetch(backendEndpoint, {
@@ -389,18 +389,10 @@ export default function Dashboard() {
         body: JSON.stringify({ url: targetUrl.trim(), title }),
       });
 
-      const contentType = res.headers.get('content-type') || '';
-      if (!contentType.includes('application/json')) {
-        const textErr = await res.text();
-        throw new Error(
-          `Cloud backend returned non-JSON response (${res.status}). Ensure your Hugging Face Space is Running and bound in Settings.`
-        );
-      }
-
       const data = await res.json();
-      if (data.detail || data.error) {
-        setStatusMsg('Backend Error: ' + (data.detail || data.error));
-        setStatusColor('var(--accent-red)');
+      if (!res.ok || data.detail || data.error) {
+        setStatusMsg('Note: ' + (data.detail || data.error || `HTTP ${res.status}`));
+        setStatusColor('var(--accent-amber)');
         setLoading(false);
         return;
       }
